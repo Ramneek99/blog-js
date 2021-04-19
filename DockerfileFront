@@ -1,9 +1,0 @@
-FROM node:6
-RUN mkdir -p /blog-js/client
-WORKDIR /blog-js/client
-COPY package.json /blog-js/client
-RUN npm cache clean
-RUN npm install
-COPY . /blog-js/client
-EXPOSE 8080
-CMD ["npm","start"]

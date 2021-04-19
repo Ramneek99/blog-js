@@ -1,9 +1,0 @@
-FROM node:6
-RUN mkdir -p /blog-js
-WORKDIR /blog-js
-COPY package.json /blog-js
-RUN npm cache clean
-RUN npm install
-COPY . /blog-js
-EXPOSE 3000
-CMD ["npm","start"]
